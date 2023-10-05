@@ -45,8 +45,8 @@ class Raven {
         if(this.y < 0 || this.y > canvas.height - this.height){
             this.directionY = this.directionY * -1;
         };
-        this.x -= this.directionX;
-        this.y += this.directionY;
+        this.x -= this.directionX * 0.3;
+        this.y += this.directionY * 0.3;
         if(this.x < 0 - this.width) this.markedForDeletion = true;
         this.timeSinceFlap += deltaTime;
         if(this.timeSinceFlap > this.flapInterval){
